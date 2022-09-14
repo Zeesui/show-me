@@ -11,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if !current_user %>
+      <li><%= link_to("注册", new_user_registration_path) %> </li>
+      <li><%= link_to("登录", new_user_session_path) %></li>
+      <% else %>
+      <%= current_user.email %>
+      <li> <%= link_to("退出", destroy_user_session_path, data: {turbo_method: :delete} ) %> </li>
+      <% end %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
   </body>
 </html>
