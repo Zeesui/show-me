@@ -73,3 +73,4 @@ end
 
 gem "bootstrap", "~> 5.2"
 gem "devise", github: "heartcombo/devise"
+gem "simple_form"
