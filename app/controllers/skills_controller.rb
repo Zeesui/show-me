@@ -1,21 +1,25 @@
 class SkillsController < ApplicationController
 
-  def user_first_skills
-    if params[:id].present?
-      @skill = Skill.new(skill_params)
-      redirect_to new_skill_path
-    else
-      redirect_to edit_skill_path
-    end
+  def new
+    @skill = Skill.new
+  end
 
+  def create
+    @skill = Skill.new(skill_params)
+    @skill.user = current_user
+    if @skill.save(skill_params)
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
-    @skill = Skill.find(params[:id])
+    @skill = Skill.find_by(params[:user_id])
   end
 
   def update
-    @skill = Skill.find(params[:id])
+    @skill = Skill.find_by(params[:user_id])
     if @skill.update(skill_params)
       redirect_to edit_path
     end
