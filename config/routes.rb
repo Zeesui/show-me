@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   namespace :geren_yonghu do
     resources :skills
   end
+  
 end

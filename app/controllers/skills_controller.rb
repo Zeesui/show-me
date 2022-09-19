@@ -1,5 +1,7 @@
 class SkillsController < ApplicationController
 
+
+
   def new
     @skill = Skill.new
   end
@@ -7,21 +9,10 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     @skill.user = current_user
-    if @skill.save(skill_params)
-      redirect_to root_path
+    if @skill.save
+      redirect_to geren_yonghu_skills_path
     else
       render :new
-    end
-  end
-
-  def edit
-    @skill = Skill.find_by(params[:user_id])
-  end
-
-  def update
-    @skill = Skill.find_by(params[:user_id])
-    if @skill.update(skill_params)
-      redirect_to edit_path
     end
   end
   private
