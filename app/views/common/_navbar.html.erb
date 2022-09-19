@@ -34,7 +34,7 @@
       </form>
       <li class="nav-item">
         <a class="nav-link active" aria-current="page">
-          <%= link_to("个人中心", geren_yonghu_skills_path) %>
+          <%= link_to("个人中心", current_user_first_touch_geren_yonghu_skills_path, data: {turbo_method: :post} ) %>
         </a>
       </li>
       <div class="collapse navbar-collapse">
