@@ -2,11 +2,15 @@
   <div class="group float-right">
     <%= link_to("建立个人页面", new_geren_yonghu_skill_path) %>
   </div>
+  <%= @skill.user_name %>
+  <%  @skills.each do |skill| %>
+
   <ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+  <li class="list-group-item"><%= skill.user_name %></li>
+  <li class="list-group-item"><%= skill.user_gender %></li>
+  <li class="list-group-item"><%= skill.lianxi_phone %></li>
+  <li class="list-group-item"><%= skill.user_wechat %></li>
+  <li class="list-group-item"><%= skill.user_email %></li>
 </ul>
+<% end %>
 </div>

@@ -1,5 +1,7 @@
 class GerenYonghu::SkillsController < ApplicationController
 
+  before_action :authenticate_user!
+
   layout 'geren_yonghu'
 
   def geren_yonghu_first_touch
@@ -22,6 +24,7 @@ class GerenYonghu::SkillsController < ApplicationController
   def index
     @skills = current_user.skills
     @skill = @skills.find_by(params[:user_id])
+
   end
 
   def new
@@ -52,7 +55,7 @@ class GerenYonghu::SkillsController < ApplicationController
   private
 
   def skill_params
-    params.require(:skill).permit(:user_id, :user_name, :usre_gender, :lianxi_phone, :user_wechat,
+    params.require(:skill).permit(:user_id, :user_name, :user_gender, :lianxi_phone, :user_wechat,
     :user_email, :conghe_jineng, :conghe_pingfen, :guowang_zuopin, :github_mail)
   end
   end
