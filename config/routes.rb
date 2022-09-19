@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   end
 
   namespace :geren_yonghu do
-    resources :skills
+    resources :skills do
+      collection do
+        post :geren_yonghu_first_touch
+      end
+    end
   end
-  
+
 end
