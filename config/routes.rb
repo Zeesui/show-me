@@ -7,4 +7,8 @@ Rails.application.routes.draw do
       post :user_first_skills
     end
   end
+
+  namespace :geren_yonghu do
+    resources :skills
+  end
 end

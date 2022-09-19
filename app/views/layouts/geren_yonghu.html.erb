@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prd01</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+      <div class="container-fluid">
+        <%= render "common/navbar" %>
+        <div class="row">
+          <div class="col-md-2">
+            <%= render "common/geren_yonghu_navbar" %>
+          </div>
+          <div class="col-md-10">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

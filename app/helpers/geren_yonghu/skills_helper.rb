@@ -1,0 +1,2 @@
+module GerenYonghu::SkillsHelper
+end
