@@ -2,18 +2,12 @@ class SkillsController < ApplicationController
 
 
 
-  def new
-    @skill = Skill.new
+  def index
+    @skills = Skill.all
   end
 
-  def create
-    @skill = Skill.new(skill_params)
-    @skill.user = current_user
-    if @skill.save
-      redirect_to geren_yonghu_skills_path
-    else
-      render :new
-    end
+  def show
+    @skill = Skill.find(params[:id])
   end
   private
 

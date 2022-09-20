@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-6">
   <div class="group float-right">
     <% if @skill.first_touch %>
       <%= link_to("建立个人页面", new_geren_yonghu_skill_path) %>
@@ -8,7 +8,7 @@
   <% end %>
 
   </div>
-  
+
   <%  @skills.each do |skill| %>
 
   <ul class="list-group">
