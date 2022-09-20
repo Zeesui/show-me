@@ -15,3 +15,32 @@
  */
 
 @import "bootstrap";
+
+.skill-box, .conghe_cepin, .conghe_pinfen, .conghe_jilu {
+  display: inline-block;
+
+}
+
+.skill-box {
+  float: left;
+
+}
+.conghe-cepin {
+  float: left;
+  display: flex;
+  align-items: flex-end;
+}
+.conghe-pinfen {
+
+  float: right;
+}
+.conghe-jilu {
+
+  float: left;
+}
+.ping-ji-box {
+  float: right;
+}
+.pin-ji-box-1 {
+  float: right;
+}

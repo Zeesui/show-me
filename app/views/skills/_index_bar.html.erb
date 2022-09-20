@@ -1,10 +1,44 @@
-<div class="row" style="margin-top: 30px;">
+<div class="skill-show-box" style="margin-top: 30px;">
   <div class="skill-box col-md-3">
     <%= link_to skill_path(skill) do %>
-      <img class="img-card-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu9zJakhDkmS2mFuDpXXL-R5uPeskTrIkyFQ&usqp=CAU" >
+    <img src="images/touxiang-2.jpeg" >
+      <!-- <img class="img-card-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu9zJakhDkmS2mFuDpXXL-R5uPeskTrIkyFQ&usqp=CAU" > -->
     <% end %>
+    <div class="fill-like"> <%= link_to(":对Ta感兴趣", '#') %>  </div>
+    <div class="first-touch"> <%= link_to(":发起笔试邀约", '#') %> </div>
+    <div class="first-takle">  <%= link_to(":发起面试邀约", '#') %></div>
   </div>
-  <div class="conghe_cepin col-md-3">
+  <div class="conghe-jilu col-md-3">
+    <div class="user-name"> 用户名称：<%= skill.user_name %> </div>
+    <div class="guowang-zuopin"> 过往作品：<%= skill.guowang_zuopin %> </div>
+    <div class="github-mail"> 个人github：<%= skill.github_mail %> </div>
+    <div class="bishi-jilu"> 最近笔试记录：<%= link_to("会员观看", '#') %> </div>
+    <div class="mianshi-jilu">最近面试记录：<%= link_to("会员观看", '#') %></div>
+    <div class="takle-what"> <%= link_to("与Ta会话:", '#') %> </div>
+  </div>
+  <div class="conghe-cepin col-md-5">
+    <div class="nengli-moxing">
+      能力模型：
+      <div class="nengli-moxing-1">
+         <img src="/images/skill.png" class="img-card-2">
+      </div>
+
+    </div>
+
+    <div class="ping-ji-box">
+      <div class="xitong-pinfen">系统评分：78  </div>
+      <div class="xitong-pinji">系统评级：</div>
+
+      <div class="pin-ji-box-1">
+        <div class="chu-ji">  初级工程师 </div>
+        <div class="zhong-ji"> 中级工程师  </div>
+        <div class="gao-ji"> 高级工程师  </div>
+      </div>
+    </div>
 
   </div>
+  <!-- <div class="conghe-pinfen col-md-3">
+
+  </div> -->
+
 </div>
