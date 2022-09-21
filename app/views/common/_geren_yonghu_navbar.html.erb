@@ -4,14 +4,18 @@
             <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
               <div class="position-sticky">
                 <div class="list-group list-group-flush mx-3 mt-4">
-                  <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
-                  </a>
-                
-                  <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-                      class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
-                  <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-                      class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a>
+                  <!-- <a href="#" class="list-group-item list-group-item-action py-2 ripple" > -->
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i>
+                    <%= link_to("编辑个人资料", geren_yonghu_skills_path,  class: "btn btn-light") %>
+                  <!-- </a> -->
+
+                  <!-- <a href="#" class="list-group-item list-group-item-action py-2 ripple"> -->
+                    <i class="fas fa-lock fa-fw me-3"></i>
+                      <%= link_to("我感兴趣的人", '#',  class: "btn btn-light") %>
+                    <!-- </a> -->
+                    <i class="fas fa-chart-line fa-fw me-3"></i>
+                      <%= link_to("对我感兴趣的人", '#',  class: "btn btn-light") %>
+
                   <a href="#" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
                   </a>
