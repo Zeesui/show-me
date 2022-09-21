@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :skills
+         has_many :jobs
 
          def user_first_touch_skill
            self.user_first_touch = true
