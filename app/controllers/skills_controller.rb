@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
 
 
   def index
-    @skills = Skill.all
+    @skills = Skill.where(params[:user_ids])
   end
 
   def show

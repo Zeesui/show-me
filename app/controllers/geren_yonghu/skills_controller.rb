@@ -14,7 +14,7 @@ class GerenYonghu::SkillsController < ApplicationController
       @skill.user = current_user
       @skill.user.user_first_touch_skill
     if @skill.save
-      redirect_to edit_geren_yonghu_skill_path(@skill)
+      redirect_to geren_yonghu_skills_path
     else
       back_url
     end
@@ -25,13 +25,15 @@ class GerenYonghu::SkillsController < ApplicationController
     @skills = current_user.skills
     @skill = @skills.find_by(params[:user_id])
   end
-  
+
   def edit
-    @skill = Skill.find_by(params[:user_id])
+    @skills = current_user.skills
+    @skill = @skills.find_by(params[:user_id])
   end
 
   def update
-    @skill = Skill.find_by(params[:user_id])
+    @skills = current_user.skills
+    @skill = @skills.find_by(params[:user_id])
     if @skill.update(skill_params)
       redirect_to geren_yonghu_skills_path
     end
