@@ -1,5 +1,5 @@
 <%= simple_form_for [:geren_yonghu, @skill] do |f| %>
-  <div class="skill-group">
+  <div class="skill-group col-md-6">
     <%= f.input :user_name, input_html: { class: "form-control"} %>
     <%= f.input :user_gender, input_html: { class: "form-control"} %>
     <%= f.input :lianxi_phone, input_html: { class: "form-control"} %>
@@ -7,4 +7,5 @@
     <%= f.input :user_email, input_html: { class: "form-control"} %>
   </div>
   <%= f.submit "Submit" %>
+  <%= link_to("取消", :back, class: "btn btn-sm btn-default") %>
 <% end %>

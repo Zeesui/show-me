@@ -1,0 +1,30 @@
+<div class="admin-products-index">
+	<div class="container-fluid col-md-10" style="margin-left: -40px;">
+		<div class="page-header">
+			<%= link_to("新增职位需求", new_qiye_yonghu_job_path, class: "btn btn-raised btn-success") %>
+		</div>
+		<div class="panel panel-default">
+			<table class="table table-shopping">
+				<thead>
+					<th>#</th>
+					<th>职位名称</th>
+					<th>薪资</th>
+					<th>职位描述</th>
+					<th>操作</th>
+				</thead>
+				<% @jobs.each do |job| %>
+                  <tr>
+                  	<td><%= job.id %></td>
+                  	<td><%= link_to(job.job_name, qiye_yonghu_job_path(job)) %></td>
+                  	<td><%= job.job_price %></td>
+                  	<td><%= job.job_miaoshu %></td>
+                    <td>
+                    	<%= link_to("编辑", edit_qiye_yonghu_job_path(job)) %> |
+                  		<%= link_to("删除", qiye_yonghu_job_path(job), data: {turbo_method: :delete, turbo_confirm: "确定删除？"}) %>
+                    </td>
+                  </tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>

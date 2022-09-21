@@ -1,0 +1,19 @@
+<h2>编辑职位需求</h2>
+
+<div class="add-edit-job col-md-4">
+  <%= simple_form_for [:qiye_yonghu, @job] do |f| %>
+
+  	<%= f.input :job_name, label: "名称" %>
+    <%= f.input :job_price, label: "薪资" %>
+  	<%= f.input :job_miaoshu, label: "描述" %>
+  	<%= f.input :lianxi_fangshi, label: "联系方式" %>
+  	<%= f.input :job_address, label: "工作地址" %>
+
+  	<%# <%= f.input :image, as: :file, label: "上传图片" %>
+  	<%# <%= f.input :is_hidden, label: "下架商品" %>
+
+  	<%= f.submit "新增" %>
+  	<%= link_to("取消", :back, class: "btn btn-sm btn-default") %>
+  	<% end %>
+
+</div>

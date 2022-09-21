@@ -24,12 +24,12 @@ class QiyeYonghu::JobsController < ApplicationController
 
     def edit
       @jobs = current_user.jobs
-      @job = @jobs.find_by(params[:user_id])
+      @job = @jobs.find(params[:id])
     end
 
     def update
       @jobs = current_user.jobs
-      @job = @jobs.find_by(params[:user_id])
+      @job = @jobs.find(params[:id])
       if @job.update(job_params)
         redirect_to qiye_yonghu_jobs_path
       else
@@ -39,14 +39,15 @@ class QiyeYonghu::JobsController < ApplicationController
 
     def destroy
       @jobs = current_user.jobs
-      @job = @jobs.find_by(params[:user_id])
+      @job = @jobs.find(params[:id])
       @job.destroy
+      redirect_to qiye_yonghu_jobs_path
     end
 
     private
 
     def job_params
-      params.require(:jobs).permit(:user_id, :job_name, :job_miaoshu, :job_price, :lianxi_fangshi,
+      params.require(:job).permit(:user_id, :job_name, :job_miaoshu, :job_price, :lianxi_fangshi,
          :job_action, :job_address)
     end
 
