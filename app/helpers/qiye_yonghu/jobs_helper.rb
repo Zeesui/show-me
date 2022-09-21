@@ -1,0 +1,2 @@
+module QiyeYonghu::JobsHelper
+end
