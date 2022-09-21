@@ -45,4 +45,6 @@ class GerenYonghu::SkillsController < ApplicationController
     params.require(:skill).permit(:user_id, :user_name, :user_gender, :lianxi_phone, :user_wechat,
     :user_email, :conghe_jineng, :conghe_pingfen, :guowang_zuopin, :github_mail)
   end
-  end
+
+
+end

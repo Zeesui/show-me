@@ -1,0 +1,33 @@
+<div class="job-box">
+  <div class="container">
+
+<div class="box-1">
+  <div class="col-md-6">
+    <div class="job-title">
+
+    <%= link_to(job.job_name, job_path(job)) %>
+
+    <%= job.created_at.to_date %>
+    </div>
+    <div class="job-number">
+      <span> <%= job.job_price %> ~  </span>
+    </div>
+  </div>
+</div>
+<div class="box-2">
+  <div class="col-md-6">
+    <div class="job-company">
+      <span>公司：</span><%= job.job_address %>
+    </div>
+
+    <div class="job-city">
+      <span>城市：</span> <%#= job.city %>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</div>

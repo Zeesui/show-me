@@ -1,5 +1,5 @@
 <div class="admin-products-index">
-	<div class="container-fluid col-md-10" style="margin-left: -40px;">
+	<div class="container-fluid col-lg-10" style="margin-left: -40px;">
 		<div class="page-header">
 			<%= link_to("新增职位需求", new_qiye_yonghu_job_path, class: "btn btn-raised btn-success") %>
 		</div>
@@ -11,6 +11,7 @@
 					<th>薪资</th>
 					<th>职位描述</th>
 					<th>操作</th>
+					<th>创建时间</th>
 				</thead>
 				<% @jobs.each do |job| %>
                   <tr>
@@ -22,6 +23,7 @@
                     	<%= link_to("编辑", edit_qiye_yonghu_job_path(job)) %> |
                   		<%= link_to("删除", qiye_yonghu_job_path(job), data: {turbo_method: :delete, turbo_confirm: "确定删除？"}) %>
                     </td>
+										<td><%= job.created_at.to_date %></td>
                   </tr>
 				<% end %>
 			</table>

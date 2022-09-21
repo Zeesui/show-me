@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :skills
 
+  resources :jobs
+
   namespace :geren_yonghu do
     resources :skills do
       collection do

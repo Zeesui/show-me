@@ -1,0 +1,6 @@
+<div class="job-index col-md-10">
+  <% @jobs.each do |job| %>
+
+    <%= render :partial => "index_bar", :collection => @jobs, :as => :job %>
+ <% end %>
+</div>
