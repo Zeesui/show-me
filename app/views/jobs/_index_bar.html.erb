@@ -1,33 +1,21 @@
-<div class="job-box">
-  <div class="container">
+<div class="job-box col-md-8" style="margin-top: 30px; margin-button: 30px;">
+  <div class="job-box-1 ">
 
 <div class="box-1">
-  <div class="col-md-6">
     <div class="job-title">
-
     <%= link_to(job.job_name, job_path(job)) %>
-
     <%= job.created_at.to_date %>
+    | <%= link_to("感兴趣", '#') %>
     </div>
-    <div class="job-number">
-      <span> <%= job.job_price %> ~  </span>
-    </div>
-  </div>
+    <div class="job-number" style="margin-top: 10px;">  <span> <%= job.job_price %>  ｜</span> 工作经验不限 ｜ 学历不限</div>
+    <div class="job-company" style="margin-top: 10px;"><span>公司：</span><%= job.job_address %> | 工作所在地：深圳 </div>
 </div>
-<div class="box-2">
-  <div class="col-md-6">
-    <div class="job-company">
-      <span>公司：</span><%= job.job_address %>
-    </div>
+<div class="box-2">  </div>
+</div>
 
-    <div class="job-city">
-      <span>城市：</span> <%#= job.city %>
-
-    </div>
-
+  <div class="job-box-2 col-md-4">
+    <div class="job-huihua"> <%= link_to(":与Ta会话", '#') %> </div>
+    <div class="job-bishi" style="margin-top: 10px;"> <%= link_to(":请求笔试", '#') %> </div>
   </div>
 
-</div>
-
-</div>
 </div>

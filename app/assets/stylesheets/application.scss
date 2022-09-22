@@ -16,18 +16,14 @@
 
 @import "bootstrap";
 
-.skill-show-box {
-  
-}
 
+// skills index start
 .skill-box, .conghe_cepin, .conghe_pinfen, .conghe_jilu {
-  display: inline-block;
-
+   display: inline-block;
 }
 
 .skill-box {
   float: left;
-
 }
 .conghe-cepin {
   float: left;
@@ -35,16 +31,46 @@
   align-items: flex-end;
 }
 .conghe-pinfen {
-
   float: right;
 }
 .conghe-jilu {
-
   float: left;
+  margin-left: -50px;
 }
 .ping-ji-box {
   float: right;
 }
 .pin-ji-box-1 {
   float: right;
+
 }
+
+.skill-index {   //用户企业前台
+  background-color: #CFD8DC;
+}
+
+.skill-show-box {
+  background-color: #ECEFF1;
+}
+// skills index end
+
+//jobs  index start
+.job-box-1, .job-box-2 {
+  display: inline-block;
+}
+
+.job-box-2 {
+  float: right;
+}
+
+.job-box {
+   background-color: #ECEFF1;
+}
+
+.job-index {  //个人用户前台
+  background-color: #CFD8DC;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+//jobs index end
