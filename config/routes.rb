@@ -4,12 +4,17 @@ Rails.application.routes.draw do
 
   resources :skills
 
-  resources :jobs
+  resources :jobs do
+    member do
+      get :job_like_join
+      get :job_like_quit
+    end
+  end
 
   namespace :geren_yonghu do
     resources :skills do
       collection do
-        post :current_user_first_touch
+        get :current_user_first_touch
       end
     end
   end

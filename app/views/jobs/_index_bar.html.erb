@@ -5,7 +5,12 @@
     <div class="job-title">
     <%= link_to(job.job_name, job_path(job)) %>
     <%= job.created_at.to_date %>
-    | <%= link_to("感兴趣", '#') %>
+    <% if current_user && current_user.job_likes.include?(job) %>
+     <%= link_to("取消感兴趣", job_like_quit_job_path(job)) %> (<%= job.user_members.count %>人)
+     <% else %>
+     | <%= link_to("感兴趣", job_like_join_job_path(job)) %> (<%= job.user_members.count %>人)
+    <% end %>
+
     </div>
     <div class="job-number" style="margin-top: 10px;">  <span> <%= job.job_price %>  ｜</span> 工作经验不限 ｜ 学历不限</div>
     <div class="job-company" style="margin-top: 10px;"><span>公司：</span><%= job.job_address %> | 工作所在地：深圳 </div>
