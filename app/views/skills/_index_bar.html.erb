@@ -4,7 +4,15 @@
     <img src="images/touxiang-2.jpeg" >
       <!-- <img class="img-card-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu9zJakhDkmS2mFuDpXXL-R5uPeskTrIkyFQ&usqp=CAU" > -->
     <% end %>
-    <div class="fill-like"> <%= link_to(":对Ta感兴趣", '#') %>  </div>
+
+    <div class="fill-like">
+      <% if current_user && current_user.skill_likes.include?(skill) %>
+      <%= link_to(":取消关注", skill_like_quit_skill_path(skill)) %> (<%= skill.skill_members.count %>人)
+      <% else %>
+      <%= link_to(":对Ta感兴趣", skill_like_join_skill_path(skill)) %> (<%= skill.skill_members.count %>人)
+      <% end %>
+    </div>
+
     <div class="first-touch"> <%= link_to(":发起笔试邀约", '#') %> </div>
     <div class="first-takle">  <%= link_to(":发起面试邀约", '#') %></div>
   </div>

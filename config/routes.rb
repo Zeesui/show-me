@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
-  resources :skills
+  resources :skills do
+    member do
+      get :skill_like_join
+      get :skill_like_quit
+    end
+  end
 
   resources :jobs do
     member do
