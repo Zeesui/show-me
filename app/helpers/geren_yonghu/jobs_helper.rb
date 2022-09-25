@@ -1,0 +1,2 @@
+module GerenYonghu::JobsHelper
+end

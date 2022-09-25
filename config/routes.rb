@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   namespace :geren_yonghu do
+    resources :jobs
     resources :skills do
       collection do
         get :current_user_first_touch
