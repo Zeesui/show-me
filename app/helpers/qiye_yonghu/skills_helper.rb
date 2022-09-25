@@ -1,0 +1,2 @@
+module QiyeYonghu::SkillsHelper
+end
