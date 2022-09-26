@@ -43,6 +43,7 @@ class GerenYonghu::SkillsController < ApplicationController
     @skills = current_user.skills
     @skill = @skills.find_by(params[:user_id])
     @skill_relation_likes = @skill.skill_members
+  
   end
 
   private
