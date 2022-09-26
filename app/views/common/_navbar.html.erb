@@ -7,13 +7,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
-            <%= link_to("个人用户前台", jobs_path, class: "btn btn-light") %>
-            <%= link_to("企业用户前台", skills_path, class: "btn btn-light") %>
-          </a>
-        </li>
-        <li class="nav-item">
+
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
@@ -26,11 +21,15 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+        </li> -->
       </ul>
+      
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">
+          <%= link_to("个人用户前台", jobs_path, class: "btn btn-light") %>
+          <%= link_to("企业用户前台", skills_path, class: "btn btn-light") %>
+        </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link active" aria-current="page">

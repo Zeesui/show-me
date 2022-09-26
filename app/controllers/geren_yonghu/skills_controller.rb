@@ -39,6 +39,12 @@ class GerenYonghu::SkillsController < ApplicationController
     end
   end
 
+  def skill_relation_like
+    @skills = current_user.skills
+    @skill = @skills.find_by(params[:user_id])
+    @skill_relation_likes = @skill.skill_members
+  end
+
   private
 
   def skill_params

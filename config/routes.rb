@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :skills do
       collection do
         get :current_user_first_touch
+        get :skill_relation_like
       end
     end
   end
