@@ -1,22 +1,24 @@
 <div class="skill-members-show">
-
+	<div class="group btn btn-success">
+    ( <%= @skill_relation_likes.count %> 人 ) <span>对我感兴趣</span>
+  </div>
 		<table class="table table-hover">
     <thead>
       <tr>
         <td>#</td>
-        <td>Title</td>
+        <td>对我感兴趣的人</td>
         <td>Description</td>
-        <td>Creator</td>
+        <td>关注时间</td>
       </tr>
     </thead>
     <tbody>
-			<% [:geren_yonghu, @skill_relation_likes].each do |like| %>
+			<%  @skill_relation_likes.each do |like| %>
 
         <tr>
-          <td>#</td>
+          <td><%= like.id %></td>
+          <td><%= like.email %></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td><%= like.created_at.to_date %></td>
 
         </tr>
       <% end %>
