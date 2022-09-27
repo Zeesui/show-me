@@ -1,7 +1,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/">
+        <span class= "btn btn-light">我的简历</span>
+      </a>
+    </li>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,7 +27,7 @@
           </ul>
         </li> -->
       </ul>
-      
+
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">
           <%= link_to("个人用户前台", jobs_path, class: "btn btn-light") %>
