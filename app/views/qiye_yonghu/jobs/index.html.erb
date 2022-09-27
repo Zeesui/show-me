@@ -9,21 +9,25 @@
 					<th>#</th>
 					<th>职位名称</th>
 					<th>薪资</th>
-					<th>职位描述</th>
 					<th>操作</th>
 					<th>创建时间</th>
+					<th>关注人数</th>
 				</thead>
 				<% @jobs.each do |job| %>
                   <tr>
                   	<td><%= job.id %></td>
                   	<td><%= link_to(job.job_name, qiye_yonghu_job_path(job)) %></td>
                   	<td><%= job.job_price %></td>
-                  	<td><%= job.job_miaoshu %></td>
                     <td>
                     	<%= link_to("编辑", edit_qiye_yonghu_job_path(job)) %> |
                   		<%= link_to("删除", qiye_yonghu_job_path(job), data: {turbo_method: :delete, turbo_confirm: "确定删除？"}) %>
                     </td>
 										<td><%= job.created_at.to_date %></td>
+										<td>
+											<%= link_to  job_user_member_qiye_yonghu_job_path(job) do %>
+											( <%= job.user_members.count %> )人感兴趣
+											<% end %>
+										</td>
                   </tr>
 				<% end %>
 			</table>

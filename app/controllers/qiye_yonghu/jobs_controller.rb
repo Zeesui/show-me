@@ -44,6 +44,13 @@ class QiyeYonghu::JobsController < ApplicationController
       redirect_to qiye_yonghu_jobs_path
     end
 
+    def job_user_member
+      @jobs = current_user.jobs
+      @job = @jobs.find(params[:id])
+      @job_user_members = @job.user_members
+    
+    end
+
     private
 
     def job_params

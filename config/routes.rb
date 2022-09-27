@@ -27,7 +27,11 @@ Rails.application.routes.draw do
   end
 
   namespace :qiye_yonghu do
-    resources :jobs
+    resources :jobs do
+      member do
+        get :job_user_member
+      end
+    end
     resources :skills
   end
 
