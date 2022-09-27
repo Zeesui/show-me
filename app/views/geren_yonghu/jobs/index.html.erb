@@ -1,7 +1,7 @@
-<div class="job-likes-index" >
-  <div class="container">
+<div class="job-likes-index col-md-12" >
+
     <% [:geren_yonghu, @jobs].each do |job| %>
       <%= render :partial => "jobs/index_bar", :collection => @jobs, :as => :job %>
    <% end %>
-  </div>
+  
 </div>

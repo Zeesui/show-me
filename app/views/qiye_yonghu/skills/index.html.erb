@@ -1,8 +1,8 @@
-<div class="skill-likes-index">
-	<div class="container" >
+<div class="skill-likes-index col-md-12">
+
 
 			<% [:qiye_yonghu, @skills].each do |skill| %>
       <%= render :partial => "skills/index_bar", :collection => @skills, :as => :skill %>
 			<% end %>
-		</div>
+	
 	</div>
