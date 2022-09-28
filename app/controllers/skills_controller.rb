@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
 
-
+  before_action :authenticate_user!, only: [:skill_like_join, :skill_like_quit]
 
   def index
     @skills = Skill.where(params[:user_ids])

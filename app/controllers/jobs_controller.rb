@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:job_like_join, :job_like_quit]
+
   def index
     @jobs = Job.all
   end
