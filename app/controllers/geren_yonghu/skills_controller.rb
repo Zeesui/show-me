@@ -1,6 +1,7 @@
 class GerenYonghu::SkillsController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :bal_bal, only: [:index, :edit, :update, :skill_relation_like]
 
   layout 'geren_yonghu'
 
@@ -22,26 +23,22 @@ class GerenYonghu::SkillsController < ApplicationController
   end
 
   def index
-    @skills = current_user.skills
-    @skill = @skills.find_by(params[:user_id])
+    #bal_bal
   end
 
   def edit
-    @skills = current_user.skills
-    @skill = @skills.find_by(params[:user_id])
+    #bal_bal
   end
 
   def update
-    @skills = current_user.skills
-    @skill = @skills.find_by(params[:user_id])
+    #bal_bal
     if @skill.update(skill_params)
       redirect_to geren_yonghu_skills_path
     end
   end
 
   def skill_relation_like
-    @skills = current_user.skills
-    @skill = @skills.find_by(params[:user_id])
+    #bal_bal
     @skill_relation_likes = @skill.skill_members
   end
 
@@ -52,5 +49,9 @@ class GerenYonghu::SkillsController < ApplicationController
     :user_email, :conghe_jineng, :conghe_pingfen, :guowang_zuopin, :github_mail)
   end
 
+  def bal_bal
+    @skills = current_user.skills
+    @skill = @skills.find_by(params[:user_id])
+  end
 
 end
